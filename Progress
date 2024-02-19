@@ -1,6 +1,6 @@
 Задача с электронными часами в формате 24 часа:
 #include <iostream>
-
+using namespace std;
 int main() {
     int a;
     std::cin>>a;
@@ -10,11 +10,22 @@ int main() {
 
 Использование тернарного оператора
 #include <iostream>
-
 using namespace std;
-
 int main() {
     int a, b;
     cin >> a >> b;
     cout << (a > b ? a : b);
+}
+
+Задача про високосный год
+#include <iostream>
+using namespace std;
+int main() {
+int a;
+using namespace std;
+cin>>y;
+if (a%4==0 && a%100!=0 || a%400==0)
+cout<<«Yes»;
+  else
+    cout<<«No»;
 }
