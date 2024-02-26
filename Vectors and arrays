@@ -22,3 +22,27 @@ int main()
     } //вывод значений от последнего к нулевому
     return 0;
 }
+
+//Объявление вектора ввод/вывод значений с условием
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector <int> a;
+    for (int i=0; i < n; i++ ) {
+    int temp;
+    std::cin>>temp;
+    if (temp > 0) {
+        a.push_back(temp);
+    }
+    }
+    for (int i = a.size() - 1; i>=0; i--){
+    std::cout<<a[i]<<" ";
+    }
+    return 0;
+}
