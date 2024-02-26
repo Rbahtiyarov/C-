@@ -1,3 +1,4 @@
+//Объявление массива ввод/ввыдо значений
 #include <iostream>
 #include <vector>
 
