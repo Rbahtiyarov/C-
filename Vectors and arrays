@@ -48,3 +48,39 @@ int main()
     return 0;
 }
 
+!!!Разобрать еще!!!
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    std::cout<<"Введите размер вектора ";
+    cin>>n;
+    vector <int> a;
+    
+    for (int i=0; i < n; i++ ) {
+    int temp;
+    std::cin>>temp;
+    if (temp >= 0) {
+        a.push_back(temp);
+    }
+    }
+    
+    int num_min = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] < a[num_min]) {
+            num_min = i;
+        }
+    }
+    int temp;
+    temp = a[0];
+    temp = a[num_min];
+    a[num_min] = temp;
+    for (auto now : a) {
+    std::cout<< now <<" ";
+    }
+    return 0;
+}
