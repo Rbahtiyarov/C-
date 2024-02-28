@@ -84,3 +84,40 @@ int main()
     }
     return 0;
 }
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    std::cout<<"Input vector size  ";
+    cin>>n;
+    vector <int> a;
+// заполняем ветор значениями
+    for (int i=0; i < n; i++ ) {
+    int temp;
+    std::cin>>temp;
+        a.push_back(temp);  
+    }
+// перебираем введенные значения    
+    for (int j = 0; j < n; j++) {
+        int num_min = j;
+        for  (int i = j; i < n; i++){
+            if (a[i] < a[num_min]) {
+                num_min=i;
+            }
+        }
+    
+    int temp;
+    temp = a[j];
+    a[j] = a[num_min];
+    a[num_min] = temp;
+    }
+    for (int output : a) {
+        cout << output << "";
+    }
+    return 0;
+}
