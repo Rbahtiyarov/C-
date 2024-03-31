@@ -128,24 +128,34 @@ int main()
 
 using namespace std;
 
-int main ()
+int main()
 {
     int n;
-    cin>>n; //Вводим количество ячеек
-    vector <int> a(n);
-    //считывем в вектор
-    for (int i=0; i < n; i++)
-    cin >> a[i];
-    
-    //обрабатываем значения
-    for (int i=0; i < n; i++) {
-        for (int j=0; j < n-1; j++)
-        if 
+    std::cout<<"Input vector size ";
+    std::cin>>n;
+    std::vector <int> v(n);
+    // заполняем вектор
+    for (int i = 0; i < n; ++i){
+    cin>>v[i];
+}
+cout<<endl;
+// сортируем вектор
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n+1; ++i) {
+    if (v[i] > v[i + 1]) {
+        int temp = v[i];
+        v[i] = v[i + 1];
+        v[i + 1] = temp;
     }
-    
-    //выводим результат
-    for (int i=0; i < n; i++)
-    cout<< a[i];
-
+    }
+    }
+    //выводим вектор
+    cout<<"Vector sorted view"<<endl;
+    for (int i = 0; i < n; ++i){
+    cout<<v[i]<<" ";
+    }
+    return 0;
+}
+  
 
 }
