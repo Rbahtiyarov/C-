@@ -7,3 +7,21 @@ int main() {
     std::cout<< (a / 3600) % 24 << ':' << a / 60 % 60 / 10 << a / 60 % 60 % 10 << ':' << a % 60 / 10 << a % 60 % 10;
     return 0;
 }
+
+//Функция, вызов, возврат результата
+#include <iostream>
+
+using namespace std;
+
+int f(int x, int y)
+{
+
+    return x+y;
+
+}
+
+int main ()
+{
+    cout<<f(10,6);
+    return 0;
+}
