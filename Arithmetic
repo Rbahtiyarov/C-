@@ -25,3 +25,28 @@ int main ()
     cout<<f(10,6);
     return 0;
 }
+
+//Ссылки и указатели
+#include <iostream>
+
+using namespace std;
+
+void f() {
+    int a = 5;
+    int b = 6;
+    
+    int res = a + b;
+}
+
+int main()
+{
+    f();
+    int *result = &res;
+    int a = 5;
+    int &ref = a;
+    int (*ref2) = &a;
+    ++a;
+    cout<<a<<" "<<ref<<" "<<ref2<<'\n';
+    cout<<result;
+    return 0;
+}
